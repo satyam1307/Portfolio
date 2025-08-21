@@ -6,5 +6,8 @@
 		{
 			"path": "../Student_Management_System"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio"
+	}
 }
