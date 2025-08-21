@@ -624,54 +624,59 @@ main {
   line-height: 1.6;
 }
 
-
 /**
- * skills 
+ * Skills Section
  */
- .container {
+.container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   text-align: center;
   padding: 10px;
 }
 
+/* Section headings like "Languages", "Frameworks" */
 .heading {
   font-size: var(--fs-2);
   font-weight: var(--fw-500);
-  padding: 10px;
+  padding: 12px;
   border-radius: 10px;
-  background:var(--bg-gradient-jet);
+  background: var(--bg-gradient-jet);
   text-align: center;
-  grid-column: span 3; /* Spans across all columns */
-  margin-bottom: 10px;
+  grid-column: 1 / -1; /* spans across all grid columns */
+  margin: 10px 0;
 }
 
+/* Skill cards */
 .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 20px 15px;
   background: var(--eerie-black-1);
   border-radius: 15px;
   box-shadow: var(--shadow-3);
   transition: var(--transition-1);
   margin: auto;
+  width: 100%;
+  max-width: 140px;
 }
 
 .logo:hover {
-  transform: scale(1.1) translateY(-5px);
+  transform: translateY(-8px) scale(1.05);
 }
 
+/* Logo image */
 .logo img {
   width: 70px;
   height: 70px;
   object-fit: contain;
 }
 
+/* Label under each logo */
 .logo figcaption {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: var(--fs-5);
   font-weight: var(--fw-500);
   background: var(--text-gradient-yellow);
@@ -679,8 +684,22 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+/* Empty placeholder (keeps grid alignment if needed) */
 .empty {
   visibility: hidden;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 
@@ -1520,45 +1539,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .typing-container{
     text-align: center;
   }
-
-
-
-  /**
-	 * skills
-	 */
-
-  .timeline-text { max-width: 700px; }
-
-  /*model*/
-  .modal-content {
-    background-color: var(--eerie-black-1);
-    margin: 12% auto;
-  }
-
 }
 
-.tech-card {
-  background: #1e1e1e;
-  border-radius: 12px;
-  padding: 15px;
-  width: 100px;
-  text-align: center;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-  margin: 10px;
-  transition: transform 0.3s ease;
-}
 
-.tech-card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-.tech-card p {
-  font-size: 14px;
-  color: #f0f0f0;
-}
-
-.tech-card:hover {
-  transform: translateY(-5px);
-}
+  
