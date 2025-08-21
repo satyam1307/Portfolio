@@ -624,59 +624,54 @@ main {
   line-height: 1.6;
 }
 
+
 /**
- * Skills Section
+ * skills 
  */
-.container {
+ .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   text-align: center;
   padding: 10px;
 }
 
-/* Section headings like "Languages", "Frameworks" */
 .heading {
   font-size: var(--fs-2);
   font-weight: var(--fw-500);
-  padding: 12px;
+  padding: 10px;
   border-radius: 10px;
-  background: var(--bg-gradient-jet);
+  background:var(--bg-gradient-jet);
   text-align: center;
-  grid-column: 1 / -1; /* spans across all grid columns */
-  margin: 10px 0;
+  grid-column: span 3; /* Spans across all columns */
+  margin-bottom: 10px;
 }
 
-/* Skill cards */
 .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 15px;
+  padding: 15px;
   background: var(--eerie-black-1);
   border-radius: 15px;
   box-shadow: var(--shadow-3);
   transition: var(--transition-1);
   margin: auto;
-  width: 100%;
-  max-width: 140px;
 }
 
 .logo:hover {
-  transform: translateY(-8px) scale(1.05);
+  transform: scale(1.1) translateY(-5px);
 }
 
-/* Logo image */
 .logo img {
   width: 70px;
   height: 70px;
   object-fit: contain;
 }
 
-/* Label under each logo */
 .logo figcaption {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: var(--fs-5);
   font-weight: var(--fw-500);
   background: var(--text-gradient-yellow);
@@ -684,22 +679,8 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
-/* Empty placeholder (keeps grid alignment if needed) */
 .empty {
   visibility: hidden;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
-  }
-
-  .logo img {
-    width: 60px;
-    height: 60px;
-  }
 }
 
 
@@ -1539,7 +1520,20 @@ textarea.form-input::-webkit-resizer { display: none; }
   .typing-container{
     text-align: center;
   }
+
+
+
+  /**
+	 * skills
+	 */
+
+  .timeline-text { max-width: 700px; }
+
+  /*model*/
+  .modal-content {
+    background-color: var(--eerie-black-1);
+    margin: 12% auto;
+  }
+
 }
 
-
-  
